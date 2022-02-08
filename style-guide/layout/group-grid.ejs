@@ -1,9 +1,0 @@
-<div class="group__grid <%= group?.layoutOptions?.columns ? `group__grid--${group.layoutOptions.columns}` : '' %>">
-    <% group.tokens.forEach((token) => { %>
-    <div class="group__grid-item">
-        <div><%- include('/layout/token-name', { token }) %></div>
-        <div><%- include(`/sample/${group.sampleFormat ?? 'empty'}`, { token }) %></div>
-        <div><%- include(`/value/${group.valueFormat ?? 'default'}`, { token }) %></div>
-    </div>
-    <% }) %>
-</div>
