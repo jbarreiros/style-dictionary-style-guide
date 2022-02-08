@@ -1,0 +1,19 @@
+{
+  "name": "style-dictionary-style-guide",
+  "version": "0.0.1",
+  "description": "Starter kit for a minimal Style Dictionary style guide",
+  "main": "sd.config.js",
+  "scripts": {
+    "build": "style-dictionary build --config ./sd.config.js",
+    "start": "npm run build && chokidar 'style-guide/**/*' 'tokens/**/*.json' -c 'npm run build'"
+  },
+  "author": "John Barreiros <johnbarreiros2@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "style-dictionary": "^3.1.1"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}

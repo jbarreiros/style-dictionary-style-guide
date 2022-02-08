@@ -1,0 +1,9 @@
+<%# Display token value and (if applicable) its original value #%>
+<code class="value">
+  <%= token.value %>
+</code>
+<% if (token.value !== token.original.value) { %>
+<code class="value value--original">
+  <%= token.original.value %>
+</code>
+<% } %>

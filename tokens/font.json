@@ -1,0 +1,101 @@
+{
+  "asset": {
+    "font": {
+      "Roboto": {
+        "400": {
+          "normal": {
+            "value": "roboto/roboto-v20-latin-regular",
+            "formats": [
+              "woff2",
+              "woff"
+            ]
+          },
+          "italic": {
+            "value": "roboto/roboto-v20-latin-italic",
+            "formats": [
+              "woff2",
+              "woff"
+            ]
+          }
+        },
+        "700": {
+          "normal": {
+            "value": "roboto/roboto-v20-latin-700",
+            "formats": [
+              "woff2",
+              "woff"
+            ]
+          },
+          "italic": {
+            "value": "roboto/roboto-v20-latin-700italic",
+            "formats": [
+              "woff2",
+              "woff"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "roboto": {
+        "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emo\""
+      },
+      "mono": {
+        "value": "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+      }
+    },
+    "weight": {
+      "lighter": {
+        "value": "lighter"
+      },
+      "light": {
+        "value": 300
+      },
+      "normal": {
+        "value": 400
+      },
+      "bold": {
+        "value": 700
+      },
+      "bolder": {
+        "value": "bolder"
+      }
+    },
+    "line-height": {
+      "base": {
+        "value": 1.5
+      },
+      "sm": {
+        "value": 1.25
+      },
+      "lg": {
+        "value": 2,
+        "comment": "For use with headers"
+      }
+    }
+  },
+  "size": {
+    "font": {
+      "base": {
+        "value": "1rem",
+        "comment": "Based on 16px"
+      },
+      "sm": {
+        "value": "0.875rem"
+      },
+      "lg": {
+        "value": "1.25rem"
+      }
+    },
+    "letter-spacing": {
+      "quarter": {
+        "value": ".25px"
+      },
+      "half": {
+        "value": ".5px"
+      }
+    }
+  }
+}
