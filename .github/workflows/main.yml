@@ -24,12 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm ci
-      - name: Build static site
-        run: npm run build
-      - name: Copy to docs
+      
+      - name: Install and Build
         run: |
-          rm -rf docs
-          mkdir docs
-          cp -r build/ docs/
+          npm ci
+          npm run build
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: build
