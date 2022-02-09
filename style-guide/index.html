@@ -212,39 +212,39 @@
 
         .group__grid-item {
             display: grid;
-            row-gap: var(--space-16);
             border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: var(--space-8);
         }
 
-        /* icons box */
-        .icon-item {
-            text-align: center;
-            row-gap: 0;
+        /* not using row-gap to allow overriding spacing at the name/sample/value level */
+        .group__grid-item>div:nth-child(2) {
+            margin-top: var(--space-16);
+            margin-bottom: var(--space-16);
         }
 
-        /* change default order (name-sample-value) to sample-name-value */
-        .icon-item>div:nth-child(1) {
-            grid-row: 2 / 3;
-            margin-top: var(--space-8);
+        /* hide empty item rows so that they don't affect grid */
+        .group__grid-item>div:empty {
+            display: none;
         }
 
-        .icon-item>div:nth-child(2) {
-            grid-row: 1 / 2;
-        }
-
-        /* Token parts */
-        .value {
-            display: block;
-        }
-
+        /* Token name row */
         .comment {
             font-size: 0.8rem;
             font-style: italic;
         }
 
-        /* Token Samples */
+        /* Token value row */
+        .value {
+            display: block;
+        }
+
+        .value__icon {
+            display: block;
+            text-align: center;
+        }
+
+        /* Token sample row */
         /* boxed */
         .sample__swatch,
         .sample__border,
@@ -269,6 +269,14 @@
 
         .sample__font-family {
             font-size: 1.3rem;
+        }
+
+        .sample__icon {
+            display: block;
+            margin-top: calc(-1 * var(--space-16));
+            margin-bottom: calc(-1 * var(--space-16));
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -321,36 +329,36 @@
             <div id=&#34;Width&#34;>
                 <h3 class="group__title">Width</h3>
                 <div class="group__grid ">
-                    <div class="group__grid-item ">
-                        <div><code>size-border-1</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-border-1</code> </div>
                         <div>
                             <div class="sample__border" style="border-width:1px;"></div>
                         </div>
                         <div> <code class="value"> 1px </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-border-2</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-border-2</code> </div>
                         <div>
                             <div class="sample__border" style="border-width:2px;"></div>
                         </div>
                         <div> <code class="value"> 2px </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-border-3</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-border-3</code> </div>
                         <div>
                             <div class="sample__border" style="border-width:3px;"></div>
                         </div>
                         <div> <code class="value"> 3px </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-border-4</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-border-4</code> </div>
                         <div>
                             <div class="sample__border" style="border-width:4px;"></div>
                         </div>
                         <div> <code class="value"> 4px </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-border-5</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-border-5</code> </div>
                         <div>
                             <div class="sample__border" style="border-width:5px;"></div>
                         </div>
@@ -361,29 +369,29 @@
             <div id=&#34;Radius&#34;>
                 <h3 class="group__title">Radius</h3>
                 <div class="group__grid ">
-                    <div class="group__grid-item ">
-                        <div><code>size-radius-base</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-radius-base</code> </div>
                         <div>
                             <div class="sample__border-radius" style="border-radius:0.25rem;"></div>
                         </div>
                         <div> <code class="value"> 0.25rem </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-radius-sm</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-radius-sm</code> </div>
                         <div>
                             <div class="sample__border-radius" style="border-radius:0.2rem;"></div>
                         </div>
                         <div> <code class="value"> 0.2rem </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-radius-lg</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-radius-lg</code> </div>
                         <div>
                             <div class="sample__border-radius" style="border-radius:0.3rem;"></div>
                         </div>
                         <div> <code class="value"> 0.3rem </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-radius-pill</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-radius-pill</code> </div>
                         <div>
                             <div class="sample__border-radius" style="border-radius:50rem;"></div>
                         </div>
@@ -408,70 +416,70 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>color-primary-blue</code> </td>
+                            <td> <code>color-primary-blue</code> </td>
                             <td> <code class="value"> #0d6efd </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#0d6efd;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-indigo</code> </td>
+                            <td> <code>color-primary-indigo</code> </td>
                             <td> <code class="value"> #6610f2 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#6610f2;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-purple</code> </td>
+                            <td> <code>color-primary-purple</code> </td>
                             <td> <code class="value"> #6f42c1 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#6f42c1;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-pink</code> </td>
+                            <td> <code>color-primary-pink</code> </td>
                             <td> <code class="value"> #d63384 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#d63384;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-red</code> </td>
+                            <td> <code>color-primary-red</code> </td>
                             <td> <code class="value"> #dc3545 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#dc3545;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-orange</code> </td>
+                            <td> <code>color-primary-orange</code> </td>
                             <td> <code class="value"> #fd7e14 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#fd7e14;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-yellow</code> </td>
+                            <td> <code>color-primary-yellow</code> </td>
                             <td> <code class="value"> #ffc107 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#ffc107;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-green</code> </td>
+                            <td> <code>color-primary-green</code> </td>
                             <td> <code class="value"> #198754 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#198754;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-teal</code> </td>
+                            <td> <code>color-primary-teal</code> </td>
                             <td> <code class="value"> #20c997 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#20c997;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-primary-cyan</code> </td>
+                            <td> <code>color-primary-cyan</code> </td>
                             <td> <code class="value"> #0dcaf0 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#0dcaf0;"></div>
@@ -493,35 +501,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>color-grey-100</code> </td>
+                            <td> <code>color-grey-100</code> </td>
                             <td> <code class="value"> #f8f9fa </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#f8f9fa;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-grey-300</code> </td>
+                            <td> <code>color-grey-300</code> </td>
                             <td> <code class="value"> #dee2e6 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#dee2e6;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-grey-500</code> </td>
+                            <td> <code>color-grey-500</code> </td>
                             <td> <code class="value"> #adb5bd </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#adb5bd;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-grey-700</code> </td>
+                            <td> <code>color-grey-700</code> </td>
                             <td> <code class="value"> #495057 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#495057;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-grey-900</code> </td>
+                            <td> <code>color-grey-900</code> </td>
                             <td> <code class="value"> #212529 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#212529;"></div>
@@ -542,14 +550,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>color-static-black</code> </td>
+                            <td> <code>color-static-black</code> </td>
                             <td> <code class="value"> #000000 </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#000000;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>color-static-white</code> </td>
+                            <td> <code>color-static-white</code> </td>
                             <td> <code class="value"> #ffffff </code> </td>
                             <td>
                                 <div class="sample__swatch" style="background-color:#ffffff;"></div>
@@ -564,8 +572,8 @@
             <div id=&#34;Family&#34;>
                 <h3 class="group__title">Family</h3>
                 <div class="group__grid group__grid--1">
-                    <div class="group__grid-item ">
-                        <div><code>font-family-roboto</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>font-family-roboto</code> </div>
                         <div>
                             <div class="sample__font-family" style="font-family:system-ui, -apple-system, &#34;Segoe UI&#34;, Roboto, &#34;Helvetica Neue&#34;, Arial, &#34;Noto Sans&#34;, &#34;Liberation Sans&#34;, sans-serif, &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emo&#34;;">
                                 <div>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
@@ -575,8 +583,8 @@
                         </div>
                         <div> <code class="value"> system-ui, -apple-system, &#34;Segoe UI&#34;, Roboto, &#34;Helvetica Neue&#34;, Arial, &#34;Noto Sans&#34;, &#34;Liberation Sans&#34;, sans-serif, &#34;Apple Color Emoji&#34;, &#34;Segoe UI Emo&#34; </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>font-family-mono</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>font-family-mono</code> </div>
                         <div>
                             <div class="sample__font-family" style="font-family:SFMono-Regular, Menlo, Monaco, Consolas, &#34;Liberation Mono&#34;, &#34;Courier New&#34;, monospace;">
                                 <div>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
@@ -600,14 +608,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>size-font-sm</code> </td>
+                            <td> <code>size-font-sm</code> </td>
                             <td> <code class="value"> 0.875rem </code> </td>
                             <td>
                                 <div class="sample__font-size" style="font-size:0.875rem;"> Aa - The quick floofy fluffy kitty </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-font-base</code>
+                            <td> <code>size-font-base</code>
                                 <div class="comment">Based on 16px</div>
                             </td>
                             <td> <code class="value"> 1rem </code> </td>
@@ -616,7 +624,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-font-lg</code> </td>
+                            <td> <code>size-font-lg</code> </td>
                             <td> <code class="value"> 1.25rem </code> </td>
                             <td>
                                 <div class="sample__font-size" style="font-size:1.25rem;"> Aa - The quick floofy fluffy kitty </div>
@@ -637,35 +645,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>font-weight-lighter</code> </td>
+                            <td> <code>font-weight-lighter</code> </td>
                             <td> <code class="value"> lighter </code> </td>
                             <td>
                                 <div class="sample__font-weight" style="font-weight:lighter;"> Aa - The quick floofy fluffy kitty </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-weight-light</code> </td>
+                            <td> <code>font-weight-light</code> </td>
                             <td> <code class="value"> 300 </code> </td>
                             <td>
                                 <div class="sample__font-weight" style="font-weight:300;"> Aa - The quick floofy fluffy kitty </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-weight-normal</code> </td>
+                            <td> <code>font-weight-normal</code> </td>
                             <td> <code class="value"> 400 </code> </td>
                             <td>
                                 <div class="sample__font-weight" style="font-weight:400;"> Aa - The quick floofy fluffy kitty </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-weight-bold</code> </td>
+                            <td> <code>font-weight-bold</code> </td>
                             <td> <code class="value"> 700 </code> </td>
                             <td>
                                 <div class="sample__font-weight" style="font-weight:700;"> Aa - The quick floofy fluffy kitty </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-weight-bolder</code> </td>
+                            <td> <code>font-weight-bolder</code> </td>
                             <td> <code class="value"> bolder </code> </td>
                             <td>
                                 <div class="sample__font-weight" style="font-weight:bolder;"> Aa - The quick floofy fluffy kitty </div>
@@ -686,21 +694,21 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>font-line-height-sm</code> </td>
+                            <td> <code>font-line-height-sm</code> </td>
                             <td> <code class="value"> 1.25 </code> </td>
                             <td>
                                 <div class="sample__font-line-height" style="line-height:1.25;"> The quick floofy fluffy kitty jumps over the sleeping dog </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-line-height-base</code> </td>
+                            <td> <code>font-line-height-base</code> </td>
                             <td> <code class="value"> 1.5 </code> </td>
                             <td>
                                 <div class="sample__font-line-height" style="line-height:1.5;"> The quick floofy fluffy kitty jumps over the sleeping dog </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>font-line-height-lg</code>
+                            <td> <code>font-line-height-lg</code>
                                 <div class="comment">For use with headers</div>
                             </td>
                             <td> <code class="value"> 2 </code> </td>
@@ -723,14 +731,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>size-letter-spacing-quarter</code> </td>
+                            <td> <code>size-letter-spacing-quarter</code> </td>
                             <td> <code class="value"> .25px </code> </td>
                             <td>
                                 <div class="sample__font-letter-spacing" style="letter-spacing:.25px;"> The fluffy kitty is sleeping </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-letter-spacing-half</code> </td>
+                            <td> <code>size-letter-spacing-half</code> </td>
                             <td> <code class="value"> .5px </code> </td>
                             <td>
                                 <div class="sample__font-letter-spacing" style="letter-spacing:.5px;"> The fluffy kitty is sleeping </div>
@@ -744,80 +752,80 @@
             <h2 class="section__title">Icon</h2>
             <div>
                 <div class="group__grid ">
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-account-circle</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/account_circle_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/account_circle_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">account_circle</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-check-circle</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/check_circle_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/check_circle_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">check_circle</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-delete</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/delete_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/delete_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">delete</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-description</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/description_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/description_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">description</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-done</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/done_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/done_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">done</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-favorite</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/favorite_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/favorite_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">favorite</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-favorite-border</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/favorite_border_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/favorite_border_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">favorite_border</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-home</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/home_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/home_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">home</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-info</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/info_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/info_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">info</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-lock</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/lock_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/lock_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">lock</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-logout</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/logout_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/logout_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">logout</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-schedule</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/schedule_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/schedule_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">schedule</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-search</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/search_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/search_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">search</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-settings</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/settings_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/settings_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">settings</code> </div>
                     </div>
-                    <div class="group__grid-item icon-item">
-                        <div><code>asset-icon-shopping-cart</code> </div>
-                        <div><img class="sample__icon" src="../assets/icons/shopping_cart_black_24dp.svg" /> </div>
+                    <div class="group__grid-item">
                         <div> </div>
+                        <div> <img class="sample__icon" src="../assets/icons/shopping_cart_black_24dp.svg" /> </div>
+                        <div> <code class="value__icon">shopping_cart</code> </div>
                     </div>
                 </div>
             </div>
@@ -826,22 +834,22 @@
             <h2 class="section__title">Shadow</h2>
             <div>
                 <div class="group__grid group__grid--2">
-                    <div class="group__grid-item ">
-                        <div><code>size-shadow-sm</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-shadow-sm</code> </div>
                         <div>
                             <div class="sample__shadow" style="box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);"></div>
                         </div>
                         <div> <code class="value"> 0 .125rem .25rem rgba(0, 0, 0, .075) </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-shadow-base</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-shadow-base</code> </div>
                         <div>
                             <div class="sample__shadow" style="box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);"></div>
                         </div>
                         <div> <code class="value"> 0 .5rem 1rem rgba(0, 0, 0, .15) </code> </div>
                     </div>
-                    <div class="group__grid-item ">
-                        <div><code>size-shadow-lg</code> </div>
+                    <div class="group__grid-item">
+                        <div> <code>size-shadow-lg</code> </div>
                         <div>
                             <div class="sample__shadow" style="box-shadow:0 1rem 3rem rgba(0, 0, 0, .175);"></div>
                         </div>
@@ -864,35 +872,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>size-spacing-1</code> </td>
+                            <td> <code>size-spacing-1</code> </td>
                             <td> <code class="value"> 0.25rem </code> </td>
                             <td>
                                 <div class="sample__square" style="width:0.25rem; height:0.25rem;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-spacing-2</code> </td>
+                            <td> <code>size-spacing-2</code> </td>
                             <td> <code class="value"> 0.5rem </code> </td>
                             <td>
                                 <div class="sample__square" style="width:0.5rem; height:0.5rem;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-spacing-3</code> </td>
+                            <td> <code>size-spacing-3</code> </td>
                             <td> <code class="value"> 1rem </code> </td>
                             <td>
                                 <div class="sample__square" style="width:1rem; height:1rem;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-spacing-4</code> </td>
+                            <td> <code>size-spacing-4</code> </td>
                             <td> <code class="value"> 1.5rem </code> </td>
                             <td>
                                 <div class="sample__square" style="width:1.5rem; height:1.5rem;"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><code>size-spacing-5</code> </td>
+                            <td> <code>size-spacing-5</code> </td>
                             <td> <code class="value"> 3rem </code> </td>
                             <td>
                                 <div class="sample__square" style="width:3rem; height:3rem;"></div>
