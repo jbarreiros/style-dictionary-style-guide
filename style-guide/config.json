@@ -4,8 +4,7 @@
   "sections": [
     {
       "title": "Animation",
-      "groups": [],
-      "#duration, easing, animation": ""
+      "groups": []
     },
     {
       "title": "Border",
@@ -56,7 +55,6 @@
     },
     {
       "title": "Font",
-      "#family, size, weight, letter spacing, line height": "",
       "groups": [
         {
           "title": "Family",
@@ -104,8 +102,16 @@
       ]
     },
     {
-      "title": "Icons",
-      "groups": []
+      "title": "Icon",
+      "groups": [
+        {
+          "tokensPath": "asset.icon",
+          "layout": "grid",
+          "itemFormat": "icon",
+          "sampleFormat": "icon",
+          "valueFormat": "empty"
+        }
+      ]
     },
     {
       "title": "Shadow",

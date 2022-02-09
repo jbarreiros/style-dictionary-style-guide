@@ -1,4 +1,4 @@
-<div id="<%= encodeURIComponent(group.title) %>">
+<div<%= group.title && ` id="${encodeURIComponent(group.title)}"` %>>
   <% if (group.title) { %>
     <h3 class="group__title"><%= group.title %></h3>
   <% } %>

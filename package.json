@@ -4,13 +4,15 @@
   "description": "Starter kit for a minimal Style Dictionary style guide",
   "main": "sd.config.js",
   "scripts": {
-    "build": "style-dictionary build --config ./sd.config.js",
-    "start": "npm run build && chokidar 'style-guide/**/*' 'tokens/**/*.json' -c 'npm run build'"
+    "clean": "rm -rf build",
+    "build": "npm run clean && style-dictionary build --config ./sd.config.js",
+    "start": "npm run build && chokidar sd.config.js 'style-guide/**/*' 'tokens/**/*.json' -c 'npm run build'"
   },
   "author": "John Barreiros <johnbarreiros2@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
+    "js-beautify": "^1.14.0",
     "style-dictionary": "^3.1.1"
   },
   "devDependencies": {

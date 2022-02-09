@@ -4,15 +4,15 @@
       <a class="nav__link" href="#<%= encodeURIComponent(section.title) %>">
         <%= section.title %>
       </a>
-      <%_ if (section.groups.length > 1) { _%>
-      <ul>
-        <%_ section.groups.forEach((group) => { _%>
-        <li>
-          <a class="nav__link" href="#<%= encodeURIComponent(group.title) %>"><%= group.title %></a>
-        </li>
-        <%_ }) _%>
-      </ul>
-      <%_ } _%>
+      <% if (section.groups.length > 1) { %>
+        <ul>
+          <% section.groups.forEach((group) => { %>
+            <li>
+              <a class="nav__link" href="#<%= encodeURIComponent(group.title) %>"><%= group.title %></a>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
     </li>
   <% }) %>
 </ul>

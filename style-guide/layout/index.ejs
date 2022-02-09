@@ -9,9 +9,9 @@
   <style>
     :root {
       --base-font: 16;
-      <%_ [2, 4,8,16,24,32,40].forEach((step) => { _%>
-      <%= `--space-${step}: calc(${step} / var(--base-font) * 1rem);` %>
-      <%_ }) _%>
+      <% [2, 4, 8, 16, 24, 32, 40].forEach((step) => { %>
+        <%= `--space-${step}: calc(${step} / var(--base-font) * 1rem);` %>
+      <% }) %>
       --header-bar-color: rgb(35, 103, 176);
       --header-color: #fff;
       --link-color: rgb(35, 103, 176);
@@ -179,22 +179,23 @@
       column-gap: var(--space-16);
     }
 
-    <%_ [1, 2, 3, 4].forEach((columns) => { _%>
-    <%= `.group__grid--${columns} { grid-template-columns: repeat(${columns}, 1fr); }` %>
-    <%_ }) _%>
+    <% [1, 2, 3, 4].forEach((columns) => { %>
+      <%= `.group__grid--${columns} { grid-template-columns: repeat(${columns}, 1fr); }` %>
+    <% }) %>
 
     .group__grid-item {
       display: grid;
-      grid-template-rows: auto 1fr;
+      row-gap: var(--space-16);
       border: 1px solid var(--border-color);
       border-radius: var(--border-radius);
       padding: var(--space-8);
     }
 
-    .group__grid-item > div:nth-child(2) {
-      margin-top: var(--space-8);
-      margin-bottom: var(--space-8);
-    }
+    /* icons box */
+    .icon-item { text-align: center; row-gap: 0; }
+    /* change default order (name-sample-value) to sample-name-value */
+    .icon-item > div:nth-child(1) { grid-row: 2 / 3; margin-top: var(--space-8); }
+    .icon-item > div:nth-child(2) { grid-row: 1 / 2; }
 
     /* Token parts */
 
@@ -233,6 +234,11 @@
 
     .sample__font-family {
       font-size: 1.3rem;
+    }
+
+    .sample__icon {
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>

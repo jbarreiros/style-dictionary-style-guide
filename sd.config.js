@@ -7,6 +7,12 @@ StyleDictionary.registerFormat(styleGuideFormat.staticFormat);
 module.exports = {
   source: ['tokens/**/*.json'],
   platforms: {
+    assets: {
+      transformGroup: ['assets'],
+      buildPath: 'build/',
+      files: [],
+      actions: ['copy_assets'],
+    },
     styleGuide: {
       transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'color/css'],
       buildPath: 'build/style-guide/',

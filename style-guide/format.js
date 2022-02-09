@@ -1,5 +1,6 @@
 const fs = require("fs");
 const ejs = require('ejs');
+const beautify = require('js-beautify').html;
 
 /**
  * @param {string} configFile
@@ -105,6 +106,6 @@ module.exports.staticFormat = {
       root: templatesFolder,
     });
 
-    return html;
+    return beautify(html, { 'max_preserve_newlines': '-1' });
   }
 };
