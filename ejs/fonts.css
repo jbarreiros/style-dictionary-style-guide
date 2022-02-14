@@ -2,7 +2,7 @@
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+	src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 	font-display: fallback;
 }
 
@@ -10,7 +10,7 @@
 	font-family: "Roboto";
 	font-style: italic;
 	font-weight: 400;
-	src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+	src: url("fonts/Roboto/Roboto-Italic.ttf") format("truetype");
 	font-display: fallback;
 }
 
@@ -18,7 +18,7 @@
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 700;
-	src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+	src: url("fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 	font-display: fallback;
 }
 
@@ -26,6 +26,6 @@
 	font-family: "Roboto";
 	font-style: italic;
 	font-weight: 700;
-	src: url("../fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+	src: url("fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 	font-display: fallback;
 }

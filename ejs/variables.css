@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 14 Feb 2022 06:35:15 GMT
+ * Generated on Mon, 14 Feb 2022 06:57:39 GMT
  */
 
 :root {
@@ -50,6 +50,12 @@
   --font-line-height-base: 1.5;
   --font-line-height-sm: 1.25;
   --font-line-height-lg: 2; /* For use with headers */
+  --size-font-1: 2.5rem;
+  --size-font-2: 2rem;
+  --size-font-3: 1.75rem;
+  --size-font-4: 1.5rem;
+  --size-font-5: 1.25rem;
+  --size-font-6: 1rem;
   --size-font-base: 1rem; /* Based on 16px */
   --size-font-sm: 0.875rem;
   --size-font-lg: 1.25rem;

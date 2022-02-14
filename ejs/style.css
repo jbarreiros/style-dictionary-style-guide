@@ -44,7 +44,7 @@ body {
 
 .page__title {
   color: var(--color-static-white);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-lighter);
   margin: 0;
 }
 
@@ -89,7 +89,8 @@ body {
 }
 
 .introduction {
-  font-size: var(--size-font-lg);
+  font-size: var(--size-font-1);
+  font-weight: var(--font-weight-lighter);
   margin-top: 0;
 }
 
