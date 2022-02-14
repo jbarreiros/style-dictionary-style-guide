@@ -9,7 +9,7 @@
   <tbody>
     <% group.tokens.forEach((token) => { %>
       <tr>
-        <td><%- include('/layout/token-name', { token }) %></td>
+        <td><%- include(`/name/${group.nameFormat ?? 'default'}`, { token }) %></td>
         <td><%- include(`/value/${group.valueFormat ?? 'default'}`, { token }) %></td>
         <td><%- include(`/sample/${group.sampleFormat ?? 'empty'}`, { token }) %></td>
       </tr>

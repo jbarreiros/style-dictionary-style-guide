@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require('fs');
 const ejs = require('ejs');
 const beautify = require('js-beautify').html;
 
@@ -69,24 +69,7 @@ function addTokensToConfig(config, tokens) {
   });
 }
 
-module.exports.jsonFormat = {
-  name: "style-guide/json",
-  formatter: ({
-    dictionary: {
-      tokens,
-    },
-    options: {
-      configFile
-    }
-  }) => {
-    const config = getConfig(configFile);
-    addTokensToConfig(config, tokens);
-
-    return JSON.stringify(config);
-  }
-};
-
-module.exports.staticFormat = {
+module.exports = {
   name: "style-guide/static",
   formatter: ({
     dictionary: {

@@ -1,0 +1,9 @@
+<div class="group__grid <%= group.layout.includes('grid-') ? `group__grid--${group.layout.substring(5)}` : '' %>">
+  <% group.tokens.forEach((token) => { %>
+    <div class="group__grid-item">
+      <div><%- include(`/name/${group.nameFormat ?? 'default'}`, { token }) %></div>
+      <div><%- include(`/sample/${group.sampleFormat ?? 'empty'}`, { token }) %></div>
+      <div><%- include(`/value/${group.valueFormat ?? 'default'}`, { token }) %></div>
+    </div>
+  <% }) %>
+</div>

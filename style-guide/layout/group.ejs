@@ -1,9 +1,0 @@
-<div<%= group.title && ` id="${encodeURIComponent(group.title)}"` %>>
-  <% if (group.title) { %>
-    <h3 class="group__title"><%= group.title %></h3>
-  <% } %>
-  <% if (group.description) { %>
-    <p class="group__description"><%= group.description %></p>
-  <% } %>
-  <%- include(`/layout/group-${group.layout ?? 'table'}`, { group }) %>
-</div>

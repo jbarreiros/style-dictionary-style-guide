@@ -59,10 +59,7 @@
         {
           "title": "Family",
           "tokensPath": "font.family",
-          "layout": "grid",
-          "layoutOptions": {
-            "columns": 1
-          },
+          "layout": "grid-1",
           "sampleFormat": "font-family"
         },
         {
@@ -107,9 +104,9 @@
         {
           "tokensPath": "asset.icon",
           "layout": "grid",
-          "itemFormat": "icon",
+          "nameFormat": "empty",
           "sampleFormat": "icon",
-          "valueFormat": "empty"
+          "valueFormat": "icon"
         }
       ]
     },
@@ -124,10 +121,7 @@
             "lg"
           ],
           "sampleFormat": "shadow",
-          "layout": "grid",
-          "layoutOptions": {
-            "columns": 2
-          },
+          "layout": "grid-2",
           "valueFormat": "only-value"
         }
       ]

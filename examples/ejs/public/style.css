@@ -1,0 +1,230 @@
+/* minimal CSS reset */
+html {
+  box-sizing: border-box;
+  font-size: var(--size-font-base);
+  font-family: var(--font-family-roboto);
+  color: var(--color-grey-700);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: var(--size-font-sm);
+}
+/* end CSS reset */
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav main";
+  grid-template-columns: 12rem 1fr;
+}
+
+.page__header {
+  grid-area: header;
+  background-color: var(--color-primary-blue);
+  padding: var(--size-spacing-3) var(--size-spacing-4);
+}
+
+.page__title {
+  color: var(--color-static-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.page__nav {
+  grid-area: nav;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  padding: var(--size-spacing-4);
+}
+
+.nav ul {
+  padding-left: var(--size-spacing-3);
+}
+
+.nav__link {
+  display: block;
+  color: var(--color-grey-700);
+  text-decoration: none;
+  padding: var(--size-spacing-1) var(--size-spacing-2);
+  margin-left: calc(-1 * var(--size-spacing-2));
+  margin-right: calc(-1 * var(--size-spacing-2));
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-color: var(--color-grey-300);
+  border-radius: var(--size-radius-base);
+}
+
+.page__main {
+  grid-area: main;
+  padding: var(--size-spacing-4);
+  width: 100%;
+  max-width: 60rem;
+}
+
+.introduction {
+  font-size: var(--size-font-lg);
+}
+
+.section__title {
+  font-size: var(--size-spacing-4);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--size-spacing-5);
+  margin-bottom: var(--size-spacing-2);
+}
+
+.section__description {
+  margin-top: var(--size-spacing-2);
+  margin-bottom: var(--size-spacing-2);
+}
+
+.group__title {
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--size-spacing-4);
+  margin-bottom: var(--size-spacing-2);
+}
+
+.group__description {
+  margin-top: var(--size-spacing-2);
+  margin-bottom: var(--size-spacing-2);
+}
+
+/* Display tokens in a table */
+
+.group__table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.group__table th {
+  font-size: var(--size-font-sm);
+}
+
+.group__table th,
+.group__table td {
+  border-bottom: var(--size-border-1) solid var(--color-grey-300);
+  text-align: left;
+  padding-top: var(--size-spacing-2);
+  padding-bottom: var(--size-spacing-2);
+}
+
+.group__table th:nth-child(1) {
+  width: 40%;
+}
+.group__table th:nth-child(2) {
+  width: 20%;
+}
+
+.group__table th:nth-child(2),
+.group__table td:nth-child(2) {
+  padding-left: var(--size-spacing-3);
+  padding-right: var(--size-spacing-3);
+}
+
+/* Display tokens in a grid, where each item is bordered */
+
+.group__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: var(--size-spacing-3);
+  column-gap: var(--size-spacing-3);
+}
+
+.group__grid--1 { grid-template-columns: repeat(1, 1fr); }
+.group__grid--2 { grid-template-columns: repeat(2, 1fr); }
+.group__grid--3 { grid-template-columns: repeat(3, 1fr); }
+.group__grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.group__grid-item {
+  display: grid;
+  border: var(--size-border-1) solid var(--color-grey-300);
+  border-radius: var(--size-radius-base);
+  padding: var(--size-spacing-2);
+}
+
+/* not using row-gap to allow overriding spacing at the name/sample/value level */
+.group__grid-item > div:nth-child(2) {
+  margin-top: var(--size-spacing-3);
+  margin-bottom: var(--size-spacing-3);
+}
+
+/* hide empty item rows so that they don't affect grid */
+.group__grid-item > div:empty { display: none; }
+
+/* Token name row */
+
+.comment {
+  font-size: var(--size-font-sm);
+  font-style: italic;
+}
+
+/* Token value row */
+
+.value {
+  display: block;
+}
+
+.value__icon {
+  display: block;
+  text-align: center;
+}
+
+/* Token sample row */
+
+/* boxed */
+.sample__swatch,
+.sample__border,
+.sample__border-radius,
+.sample__shadow {
+  height: 40px;
+  width: 100%;
+  border-radius: var(--size-radius-base);
+}
+
+/* bordered! */
+.sample__border,
+.sample__border-radius {
+  border-width: var(--size-border-1);
+  border-style: solid;
+}
+
+.sample__square {
+  background-color: currentColor;
+  border-radius: var(--size-radius-base);
+}
+
+.sample__font-family {
+  font-size: var(--size-font-lg);
+}
+
+.sample__icon {
+  display: block;
+  margin-top: calc(-1 * var(--size-spacing-3));
+  margin-bottom: calc(-1 * var(--size-spacing-3));
+  margin-left: auto;
+  margin-right: auto;
+}

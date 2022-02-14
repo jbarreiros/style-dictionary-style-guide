@@ -1,0 +1,10 @@
+<div id="<%= group.title && encodeURIComponent(group.title) %>">
+  <% if (group.title) { %>
+    <h3 class="group__title"><%= group.title %></h3>
+  <% } %>
+  <% if (group.description) { %>
+    <p class="group__description"><%= group.description %></p>
+  <% } %>
+  <%# group.layout = grid(-[1-4])?|table #%>
+  <%- include(`/layout/group-${group?.layout?.indexOf('grid') === 0 ? 'grid' : (group.layout ?? 'table')}`, { group }) %>
+</div>

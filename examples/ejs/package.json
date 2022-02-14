@@ -1,0 +1,21 @@
+{
+  "name": "style-dictionary-ejs-style-guide",
+  "version": "0.0.1",
+  "description": "Example Style Dictionary style guide using EJS",
+  "main": "sd.config.js",
+  "scripts": {
+    "build": "style-dictionary build --config ./sd.config.js",
+    "start": "npm run build && chokidar 'public/style.css' 'src/**/*' 'tokens/**/*.json' 'views/**/*' config.json sd.config.js -c 'npm run build'"
+  },
+  "author": "John Barreiros <johnbarreiros2@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "js-beautify": "^1.14.0",
+    "style-dictionary": "^3.1.1"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}
