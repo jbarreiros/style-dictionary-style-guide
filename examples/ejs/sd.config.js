@@ -55,7 +55,7 @@ module.exports = {
           format: 'style-guide/static',
           options: {
             templatesFolder: 'views/',
-            configFile: 'config.json'
+            configFile: 'style-guide-config.json'
           }
         }
       ]

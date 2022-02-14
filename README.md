@@ -1,4 +1,4 @@
-[Style Dictionary](https://amzn.github.io/style-dictionary) is an [incredible tool](https://amzn.github.io/style-dictionary/#/README?id=watch-the-demo-on-youtube) for managing design tokens and static assets. Its biggest super power is the ability to transform those tokens and assets into any number of representations, like CSS variables, SASS variables, etc.
+[Style Dictionary](https://amzn.github.io/style-dictionary) is an [incredible tool](https://amzn.github.io/style-dictionary/#/README?id=watch-the-demo-on-youtube) for managing design tokens and static assets. Its biggest super power is the ability to transform those tokens and static assets into any number of representations, like CSS variables, SASS variables... literally anything.
 
 Out of the box, Style Dictionary does not provide a way to showcase your tokens. This makes sense because design systems are unique and diverse, and providing a one-size-fits-all solution is a large ask.
 
