@@ -1,6 +1,6 @@
 {
   "title": "Acme Design Tokens",
-  "introduction": "Design variables representing our Acme design system.",
+  "introduction": "Design variables and assets representing the delicious Acme design system.",
   "sections": [
     {
       "title": "Animation",
@@ -68,7 +68,13 @@
           "order": [
             "sm",
             "base",
-            "lg"
+            "6",
+            "lg",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"
           ],
           "layout": "table",
           "sampleFormat": "font-size"

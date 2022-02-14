@@ -83,6 +83,24 @@
       },
       "lg": {
         "value": "1.25rem"
+      },
+      "1": {
+        "value": "2.5rem"
+      },
+      "2": {
+        "value": "2rem"
+      },
+      "3": {
+        "value": "1.75rem"
+      },
+      "4": {
+        "value": "1.5rem"
+      },
+      "5": {
+        "value": "1.25rem"
+      },
+      "6": {
+        "value": "1rem"
       }
     },
     "letter-spacing": {
