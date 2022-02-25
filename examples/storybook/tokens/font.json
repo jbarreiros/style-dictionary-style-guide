@@ -1,0 +1,115 @@
+{
+  "asset": {
+    "font": {
+      "Roboto": {
+        "400": {
+          "normal": {
+            "value": "Roboto/Roboto-Regular",
+            "formats": [
+              "ttf"
+            ]
+          },
+          "italic": {
+            "value": "Roboto/Roboto-Italic",
+            "formats": [
+              "ttf"
+            ]
+          }
+        },
+        "700": {
+          "normal": {
+            "value": "Roboto/Roboto-Bold",
+            "formats": [
+              "ttf"
+            ]
+          },
+          "italic": {
+            "value": "Roboto/Roboto-BoldItalic",
+            "formats": [
+              "ttf"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "roboto": {
+        "value": "Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif"
+      },
+      "mono": {
+        "value": "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+      }
+    },
+    "weight": {
+      "lighter": {
+        "value": "lighter"
+      },
+      "light": {
+        "value": 300
+      },
+      "normal": {
+        "value": 400
+      },
+      "bold": {
+        "value": 700
+      },
+      "bolder": {
+        "value": "bolder"
+      }
+    },
+    "line-height": {
+      "base": {
+        "value": 1.5
+      },
+      "sm": {
+        "value": 1.25
+      },
+      "lg": {
+        "value": 2,
+        "comment": "For use with headers"
+      }
+    }
+  },
+  "size": {
+    "font": {
+      "base": {
+        "value": "1rem",
+        "comment": "Based on 16px"
+      },
+      "sm": {
+        "value": "0.875rem"
+      },
+      "lg": {
+        "value": "1.25rem"
+      },
+      "1": {
+        "value": "2.5rem"
+      },
+      "2": {
+        "value": "2rem"
+      },
+      "3": {
+        "value": "1.75rem"
+      },
+      "4": {
+        "value": "1.5rem"
+      },
+      "5": {
+        "value": "1.25rem"
+      },
+      "6": {
+        "value": "1rem"
+      }
+    },
+    "letter-spacing": {
+      "quarter": {
+        "value": ".25px"
+      },
+      "half": {
+        "value": ".5px"
+      }
+    }
+  }
+}

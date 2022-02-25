@@ -1,0 +1,38 @@
+import { Meta, Canvas, Story, ColorPalette } from "@storybook/addon-docs";
+import DT from "./utils";
+import tokens from "../public/tokens";
+
+<Meta title="Design Tokens" />
+
+# Acme Design tokens
+
+Design variables and assets representing the delicious Acme design system.
+
+## Colors
+
+These are the colors we use at Acme.
+
+<Canvas withSource="none">
+  <Story name="Colors" height="10px">
+    <ColorPalette>
+      <DT.ColorItem
+        title="Primary"
+        subtitle="Generic colors used for elements that must reflect Acme's brand."
+        tokens={tokens}
+        path="color.primary"
+      />
+      <DT.ColorItem
+        title="Grey"
+        subtitle="Grey colors are used for text, backgrounds, lines and borders."
+        tokens={tokens}
+        path="color.grey"
+      />
+      <DT.ColorItem
+        title="Static"
+        tokens={tokens}
+        path="color.static"
+        order={["black", "white"]}
+      />
+    </ColorPalette>
+  </Story>
+</Canvas>

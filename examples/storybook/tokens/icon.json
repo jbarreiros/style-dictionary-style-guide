@@ -1,0 +1,51 @@
+{
+  "asset": {
+    "icon": {
+      "account_circle": {
+        "value": "account_circle_black_24dp.svg"
+      },
+      "check_circle": {
+        "value": "check_circle_black_24dp.svg"
+      },
+      "delete": {
+        "value": "delete_black_24dp.svg"
+      },
+      "description": {
+        "value": "description_black_24dp.svg"
+      },
+      "done": {
+        "value": "done_black_24dp.svg"
+      },
+      "favorite": {
+        "value": "favorite_black_24dp.svg"
+      },
+      "favorite_border": {
+        "value": "favorite_border_black_24dp.svg"
+      },
+      "home": {
+        "value": "home_black_24dp.svg"
+      },
+      "info": {
+        "value": "info_black_24dp.svg"
+      },
+      "lock": {
+        "value": "lock_black_24dp.svg"
+      },
+      "logout": {
+        "value": "logout_black_24dp.svg"
+      },
+      "schedule": {
+        "value": "schedule_black_24dp.svg"
+      },
+      "search": {
+        "value": "search_black_24dp.svg"
+      },
+      "settings": {
+        "value": "settings_black_24dp.svg"
+      },
+      "shopping_cart": {
+        "value": "shopping_cart_black_24dp.svg"
+      }
+    }
+  }
+}

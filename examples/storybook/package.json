@@ -1,0 +1,27 @@
+{
+  "name": "style-dictionary-storybook-style-guide",
+  "version": "0.1.0",
+  "description": "Example Style Dictionary style guide using Storybook",
+  "scripts": {
+    "styledictionary": "npm run build-styledictionary && chokidar 'src/**/*' 'tokens/**/*.json' sd.config.js -c 'npm run build-styledictionary'",
+    "build-styledictionary": "style-dictionary build --config ./sd.config.js",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "author": "John Barreiros <johnbarreiros2@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-dictionary": "^3.7.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/node-logger": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "chokidar": "^3.5.3",
+    "webpack": "^5.69.1"
+  }
+}
