@@ -1,10 +1,10 @@
 const StyleDictionary = require('style-dictionary');
 const styleGuideFormat = require('./src/styleGuide');
-const copyAssetsAction = require('./src/copyAssetsFolders');
+const copyDist = require('./src/copyDist');
 const fontFace = require('./src/fontFace');
 
 StyleDictionary.registerFormat(styleGuideFormat);
-StyleDictionary.registerAction(copyAssetsAction);
+StyleDictionary.registerAction(copyDist);
 StyleDictionary.registerTransform(fontFace.transform);
 StyleDictionary.registerFormat(fontFace.format);
 
@@ -13,7 +13,7 @@ module.exports = {
   platforms: {
     css: {
       transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'color/css'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'variables.css',
@@ -23,7 +23,7 @@ module.exports = {
     },
     'font-face': {
       transforms: ['attribute/font'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'fonts.css',
@@ -42,9 +42,9 @@ module.exports = {
     },
     assets: {
       transformGroup: ['assets'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [],
-      actions: ['copy_assets_folders'],
+      actions: ['copy_assets'],
     },
     styleGuide: {
       transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'color/css'],
@@ -58,7 +58,8 @@ module.exports = {
             configFile: 'style-guide-config.json'
           }
         }
-      ]
+      ],
+      actions: ['copy_dist'],
     }
   }
 }
