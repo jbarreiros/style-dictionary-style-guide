@@ -1,8 +1,6 @@
 const StyleDictionary = require('style-dictionary');
-const copyAssetsAction = require('./src/copyAssetsFolders');
-const fontFace = require('./src/fontFace');
+const fontFace = require('./src/style-dictionary/fontFace');
 
-StyleDictionary.registerAction(copyAssetsAction);
 StyleDictionary.registerTransform(fontFace.transform);
 StyleDictionary.registerFormat(fontFace.format);
 
@@ -11,7 +9,7 @@ module.exports = {
   platforms: {
     css: {
       transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'color/css'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'variables.css',
@@ -21,7 +19,7 @@ module.exports = {
     },
     'font-face': {
       transforms: ['attribute/font'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'fonts.css',
@@ -40,13 +38,13 @@ module.exports = {
     },
     assets: {
       transformGroup: ['assets'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [],
-      actions: ['copy_assets_folders'],
+      actions: ['copy_assets'],
     },
     json: {
       transforms: ['attribute/cti', 'name/cti/kebab'],
-      buildPath: 'public/',
+      buildPath: 'dist/',
       files: [
         {
           destination: 'tokens.json',

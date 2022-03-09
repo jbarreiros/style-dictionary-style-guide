@@ -1,9 +1,4 @@
-import React from 'react';
-import {
-  ColorItem as StorybookColorItem,
-} from "@storybook/addon-docs";
-
-function getTokenGroup(tokens, targetPath, orderOverride = []) {
+export function getTokenGroup(tokens, targetPath, orderOverride = []) {
   let tokenGroup;
 
   try {
@@ -20,15 +15,21 @@ function getTokenGroup(tokens, targetPath, orderOverride = []) {
   return Object.values(tokenGroup);
 }
 
-function ColorItem({ tokens, path, order, ...rest }) {
-  const colorTokens = getTokenGroup(tokens, path, order);
-  const colors = colorTokens.map(token => token.value);
-
-  return (<StorybookColorItem colors={colors} {...rest} />);
+function camalize(str) {
+  return str
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
 
-const DT = {
-  ColorItem,
-};
-
-export default DT;
+export function prefixTokenName(format, name) {
+  switch (format) {
+    case 'CSS':
+      return `--${name}`;
+    case 'SASS':
+      return `$${name}`;
+    case 'JS':
+      return camalize(name);
+    default:
+      return name;
+  }
+}

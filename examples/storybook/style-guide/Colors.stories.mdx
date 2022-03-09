@@ -1,0 +1,24 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { getTokenGroup } from "../src/utils";
+import tokens from "../dist/tokens";
+import { Table } from "../src/components/Table";
+import { SwatchSample } from "../src/components/Token";
+
+<Meta title="Colors" />
+
+# Colors
+
+These are the colors we use at Acme.
+
+## Primary
+
+Generic colors used for elements that must reflect Acme's brand.
+
+<Story name="Primary">
+  <Table
+    tokens={getTokenGroup(tokens, "color.primary", [])}
+    NameFormat={undefined}
+    ValueFormat={undefined}
+    SampleFormat={SwatchSample}
+  />
+</Story>

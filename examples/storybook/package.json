@@ -5,8 +5,9 @@
   "scripts": {
     "styledictionary": "npm run build-styledictionary && chokidar 'src/**/*' 'tokens/**/*.json' sd.config.js -c 'npm run build-styledictionary'",
     "build-styledictionary": "style-dictionary build --config ./sd.config.js",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "clean-styledictionary": "style-dictionary clean --config ./sd.config.js",
+    "storybook": "start-storybook -p 6006 -s dist",
+    "build-storybook": "build-storybook -s dist"
   },
   "author": "John Barreiros <johnbarreiros2@gmail.com>",
   "license": "ISC",
@@ -17,11 +18,12 @@
   },
   "devDependencies": {
     "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-toolbars": "^6.4.19",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
     "@storybook/node-logger": "^6.4.19",
     "@storybook/react": "^6.4.19",
-    "chokidar": "^3.5.3",
+    "chokidar-cli": "^3.0.0",
     "webpack": "^5.69.1"
   }
 }
