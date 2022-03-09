@@ -3,19 +3,19 @@ import { getTokenGroup } from "../src/utils";
 import tokens from "../dist/tokens";
 import { Table } from "../src/components/Table";
 import { Grid } from "../src/components/Grid";
-import {
-  FontFamilySample,
-  FontSizeSample,
-  FontWeightSample,
-  FontLineHeightSample,
-  FontLetterSpacingSample,
-} from "../src/components/Token.style";
+import styled from "@emotion/styled";
+import { Boxed } from "../src/components/Token.style";
 
 <Meta title="Font" />
 
 # Font Tokens
 
 ## Font Family
+
+export const FontFamilySample = styled.div`
+  font-size: var(--size-font-lg);
+  font-family: ${(props) => props.token.value};
+`;
 
 <Story name="Font Family">
   <Grid
@@ -32,6 +32,10 @@ import {
 </Story>
 
 ## Font Size
+
+export const FontSizeSample = styled.div`
+  font-size: ${(props) => props.token.value};
+`;
 
 <Story name="Font Size">
   <Table
@@ -56,6 +60,10 @@ import {
 
 ## Font Weight
 
+export const FontWeightSample = styled.div`
+  font-weight: ${(props) => props.token.value};
+`;
+
 <Story name="Font Weight">
   <Table
     tokens={getTokenGroup(tokens, "font.weight")}
@@ -69,6 +77,11 @@ import {
 
 ## Line Height
 
+export const FontLineHeightSample = styled.div`
+  line-height: ${(props) => props.token.value};
+  width: 16rem;
+`;
+
 <Story name="Line Height">
   <Table
     tokens={getTokenGroup(tokens, "font.line-height", ["sm", "base", "lg"])}
@@ -81,6 +94,10 @@ import {
 </Story>
 
 ## Letter Spacing
+
+export const FontLetterSpacingSample = styled.div`
+  letter-spacing: ${(props) => props.token.value};
+`;
 
 <Story name="Letter Spacing">
   <Table

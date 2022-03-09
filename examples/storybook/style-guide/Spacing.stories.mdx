@@ -2,13 +2,20 @@ import { Meta, Story } from "@storybook/addon-docs";
 import { getTokenGroup } from "../src/utils";
 import tokens from "../dist/tokens";
 import { Table } from "../src/components/Table";
-import { SizeSample } from "../src/components/Token.style";
+import styled from "@emotion/styled";
 
 <Meta title="Spacing" />
 
 # Spacing Tokens
 
 Use the following for padding, margins, and icons.
+
+export const SizeSample = styled.div`
+  background-color: currentColor;
+  border-radius: var(--size-radius-base);
+  height: ${(props) => props.token.value};
+  width: ${(props) => props.token.value};
+`;
 
 <Story name="Spacing">
   <Table

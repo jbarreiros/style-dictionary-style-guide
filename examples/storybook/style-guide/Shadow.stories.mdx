@@ -2,11 +2,16 @@ import { Meta, Story } from "@storybook/addon-docs";
 import { getTokenGroup } from "../src/utils";
 import tokens from "../dist/tokens";
 import { Grid } from "../src/components/Grid";
-import { Value, ShadowSample } from "../src/components/Token.style";
+import styled from "@emotion/styled";
+import { Boxed, Value } from "../src/components/Token.style";
 
 <Meta title="Shadow" />
 
 # Shadow
+
+export const ShadowSample = styled(Boxed)`
+  box-shadow: ${(props) => props.token.value};
+`;
 
 <Story name="Shadow">
   <Grid
