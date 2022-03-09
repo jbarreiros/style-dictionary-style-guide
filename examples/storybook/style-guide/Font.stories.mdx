@@ -2,16 +2,34 @@ import { Meta, Story } from "@storybook/addon-docs";
 import { getTokenGroup } from "../src/utils";
 import tokens from "../dist/tokens";
 import { Table } from "../src/components/Table";
+import { Grid } from "../src/components/Grid";
 import {
+  FontFamilySample,
   FontSizeSample,
   FontWeightSample,
   FontLineHeightSample,
   FontLetterSpacingSample,
-} from "../src/components/Token";
+} from "../src/components/Token.style";
 
 <Meta title="Font" />
 
 # Font Tokens
+
+## Font Family
+
+<Story name="Font Family">
+  <Grid
+    columns={1}
+    tokens={getTokenGroup(tokens, "font.family")}
+    SampleFormat={({ token }) => (
+      <FontFamilySample token={token}>
+        <div>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <div>abcdefghijklmnopqrstuvwxyz</div>
+        <div>0123456789</div>
+      </FontFamilySample>
+    )}
+  />
+</Story>
 
 ## Font Size
 
@@ -28,7 +46,11 @@ import {
       "2",
       "1",
     ])}
-    SampleFormat={FontSizeSample}
+    SampleFormat={({ token }) => (
+      <FontSizeSample token={token}>
+        Aa - The quick floofy fluffy kitty
+      </FontSizeSample>
+    )}
   />
 </Story>
 
@@ -37,7 +59,11 @@ import {
 <Story name="Font Weight">
   <Table
     tokens={getTokenGroup(tokens, "font.weight")}
-    SampleFormat={FontWeightSample}
+    SampleFormat={({ token }) => (
+      <FontWeightSample token={token}>
+        Aa - The quick floofy fluffy kitty
+      </FontWeightSample>
+    )}
   />
 </Story>
 
@@ -46,7 +72,11 @@ import {
 <Story name="Line Height">
   <Table
     tokens={getTokenGroup(tokens, "font.line-height", ["sm", "base", "lg"])}
-    SampleFormat={FontLineHeightSample}
+    SampleFormat={({ token }) => (
+      <FontLineHeightSample token={token}>
+        The quick floofy fluffy kitty jumps over the snoring sleeping doggo.
+      </FontLineHeightSample>
+    )}
   />
 </Story>
 
@@ -55,6 +85,10 @@ import {
 <Story name="Letter Spacing">
   <Table
     tokens={getTokenGroup(tokens, "size.letter-spacing")}
-    SampleFormat={FontLetterSpacingSample}
+    SampleFormat={({ token }) => (
+      <FontLetterSpacingSample token={token}>
+        The fluffy kitty is sleeping
+      </FontLetterSpacingSample>
+    )}
   />
 </Story>

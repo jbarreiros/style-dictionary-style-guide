@@ -1,0 +1,18 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { getTokenGroup } from "../src/utils";
+import tokens from "../dist/tokens";
+import { Grid } from "../src/components/Grid";
+import { Value, ShadowSample } from "../src/components/Token.style";
+
+<Meta title="Shadow" />
+
+# Shadow
+
+<Story name="Shadow">
+  <Grid
+    columns={2}
+    tokens={getTokenGroup(tokens, "size.shadow", ["sm", "base", "lg"])}
+    ValueFormat={({ token }) => <Value>{token.value}</Value>}
+    SampleFormat={ShadowSample}
+  />
+</Story>
