@@ -55,8 +55,8 @@ const ValueCell = ({ token }) => (
 
 export const Table = ({
   tokens,
-  NameFormat = NameCell, // will this work with <></> for empty cell
-  ValueFormat = ValueCell, // ditto
+  NameFormat = NameCell,
+  ValueFormat = ValueCell,
   SampleFormat
 }) => (
   <StyledTable>

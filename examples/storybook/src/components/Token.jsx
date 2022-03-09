@@ -13,6 +13,8 @@ export const Name = styled(Code)``;
 export const Comment = styled.div`
   font-size: var(--size-font-sm);
   font-style: italic;
+  margin-top: var(--size-spacing-2);
+  color: var(--color-grey-500);
 `;
 
 // "Value" components ---------------------------------
@@ -57,13 +59,14 @@ const FontLetterSpacingSampleWrapper = styled.div`
 `;
 
 export const FontLetterSpacingSample = ({ token }) => (
-  <FontLetterSpacingSample token={token}>
+  <FontLetterSpacingSampleWrapper token={token}>
     The fluffy kitty is sleeping
-  </FontLetterSpacingSample>
+  </FontLetterSpacingSampleWrapper>
 );
 
 const FontLineHeightSampleWrapper = styled.div`
   line-height: ${props => props.token.value};
+  width: 16rem;
 `;
 
 export const FontLineHeightSample = ({ token }) => (

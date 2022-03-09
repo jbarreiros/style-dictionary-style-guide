@@ -1,0 +1,60 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { getTokenGroup } from "../src/utils";
+import tokens from "../dist/tokens";
+import { Table } from "../src/components/Table";
+import {
+  FontSizeSample,
+  FontWeightSample,
+  FontLineHeightSample,
+  FontLetterSpacingSample,
+} from "../src/components/Token";
+
+<Meta title="Font" />
+
+# Font Tokens
+
+## Font Size
+
+<Story name="Font Size">
+  <Table
+    tokens={getTokenGroup(tokens, "size.font", [
+      "sm",
+      "base",
+      "6",
+      "lg",
+      "5",
+      "4",
+      "3",
+      "2",
+      "1",
+    ])}
+    SampleFormat={FontSizeSample}
+  />
+</Story>
+
+## Font Weight
+
+<Story name="Font Weight">
+  <Table
+    tokens={getTokenGroup(tokens, "font.weight")}
+    SampleFormat={FontWeightSample}
+  />
+</Story>
+
+## Line Height
+
+<Story name="Line Height">
+  <Table
+    tokens={getTokenGroup(tokens, "font.line-height", ["sm", "base", "lg"])}
+    SampleFormat={FontLineHeightSample}
+  />
+</Story>
+
+## Letter Spacing
+
+<Story name="Letter Spacing">
+  <Table
+    tokens={getTokenGroup(tokens, "size.letter-spacing")}
+    SampleFormat={FontLetterSpacingSample}
+  />
+</Story>

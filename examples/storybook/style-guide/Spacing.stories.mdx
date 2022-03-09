@@ -1,0 +1,18 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { getTokenGroup } from "../src/utils";
+import tokens from "../dist/tokens";
+import { Table } from "../src/components/Table";
+import { SizeSample } from "../src/components/Token";
+
+<Meta title="Spacing" />
+
+# Spacing Tokens
+
+Use the following for padding, margins, and icons.
+
+<Story name="Spacing">
+  <Table
+    tokens={getTokenGroup(tokens, "size.spacing")}
+    SampleFormat={SizeSample}
+  />
+</Story>

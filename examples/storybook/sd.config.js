@@ -31,7 +31,7 @@ module.exports = {
             },
           },
           options: {
-            fontPathPrefix: 'fonts/'
+            fontPathPrefix: 'assets/fonts/'
           }
         },
       ],
