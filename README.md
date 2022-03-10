@@ -8,5 +8,5 @@ _Note, I have zero experience with mobile, and unsure how representing android/i
 
 ## Examples:
 
-- Single-page static style guide using EJS templates ([source](https://github.com/jbarreiros/style-dictionary-style-guide/tree/main/examples/ejs)) ([preview](https://jbarreiros.github.io/style-dictionary-style-guide/ejs/))
 - Storybook style guide ([source](https://github.com/jbarreiros/style-dictionary-style-guide/tree/main/examples/storybook)) ([preview](https://jbarreiros.github.io/style-dictionary-style-guide/storybook/))
+- Single-page static style guide using EJS templates ([source](https://github.com/jbarreiros/style-dictionary-style-guide/tree/main/examples/ejs)) ([preview](https://jbarreiros.github.io/style-dictionary-style-guide/ejs/))
