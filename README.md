@@ -6,7 +6,7 @@ This repo provides a couple of very minimal examples that, I hope, are not too c
 
 _Note, I have zero experience with mobile, and unsure how representing android/ios apps would affect any of this._
 
-Credits: All design token values came from looking at the [Bootstrap](https://getbootstrap.com/) source.
+Credits: All design token values came from looking at the [Bootstrap](https://getbootstrap.com/) variables file.
 
 ## Examples:
 
