@@ -9,21 +9,21 @@ import { Boxed } from "../src/components/Token.style";
 
 # Border
 
-## Border Width
+## Width
 
 export const BorderSample = styled(Boxed)`
   border-width: ${(props) => props.token.value};
   border-style: solid;
 `;
 
-<Story name="Border Width">
+<Story name="Width">
   <Grid
     tokens={getTokenGroup(tokens, "size.border")}
     SampleFormat={BorderSample}
   />
 </Story>
 
-## Border Radius
+## Radius
 
 export const RadiusSample = styled(Boxed)`
   border-width: var(--size-border-1);
@@ -31,7 +31,7 @@ export const RadiusSample = styled(Boxed)`
   border-radius: ${(props) => props.token.value};
 `;
 
-<Story name="Border Radius">
+<Story name="Radius">
   <Grid
     tokens={getTokenGroup(tokens, "size.radius")}
     SampleFormat={RadiusSample}

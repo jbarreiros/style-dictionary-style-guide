@@ -4,7 +4,9 @@ Out of the box, Style Dictionary does not provide a way to showcase your tokens.
 
 This repo provides a couple of very minimal examples that have worked for me. My hope is that their minimalism makes them easy to extend, customize, and remix.
 
-Examples:
+_Note, I have zero experience with mobile, and unsure how representing android/ios apps would affect any of this._
+
+## Examples:
 
 - Single-page static style guide using EJS templates ([source](https://github.com/jbarreiros/style-dictionary-style-guide/tree/main/examples/ejs)) ([preview](https://jbarreiros.github.io/style-dictionary-style-guide/ejs/))
-- Storybook (_working on it_)
+- Storybook style guide ([source](https://github.com/jbarreiros/style-dictionary-style-guide/tree/main/examples/storybook)) ([preview](https://jbarreiros.github.io/style-dictionary-style-guide/storybook/))

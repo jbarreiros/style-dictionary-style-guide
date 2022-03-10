@@ -10,14 +10,14 @@ import { Boxed } from "../src/components/Token.style";
 
 # Font Tokens
 
-## Font Family
+## Family
 
 export const FontFamilySample = styled.div`
   font-size: var(--size-font-lg);
   font-family: ${(props) => props.token.value};
 `;
 
-<Story name="Font Family">
+<Story name="Family">
   <Grid
     columns={1}
     tokens={getTokenGroup(tokens, "font.family")}
@@ -31,13 +31,13 @@ export const FontFamilySample = styled.div`
   />
 </Story>
 
-## Font Size
+## Size
 
 export const FontSizeSample = styled.div`
   font-size: ${(props) => props.token.value};
 `;
 
-<Story name="Font Size">
+<Story name="Size">
   <Table
     tokens={getTokenGroup(tokens, "size.font", [
       "sm",
@@ -58,13 +58,13 @@ export const FontSizeSample = styled.div`
   />
 </Story>
 
-## Font Weight
+## Weight
 
 export const FontWeightSample = styled.div`
   font-weight: ${(props) => props.token.value};
 `;
 
-<Story name="Font Weight">
+<Story name="Weight">
   <Table
     tokens={getTokenGroup(tokens, "font.weight")}
     SampleFormat={({ token }) => (

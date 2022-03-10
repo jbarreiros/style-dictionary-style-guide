@@ -4,8 +4,8 @@
   "description": "Example Style Dictionary style guide using EJS",
   "main": "sd.config.js",
   "scripts": {
-    "build": "style-dictionary build --config ./sd.config.js",
-    "clean": "style-dictionary clean --config ./sd.config.js",
+    "build": "style-dictionary build --config sd.config.js",
+    "clean": "style-dictionary clean --config sd.config.js",
     "start": "npm run build && chokidar 'public/style.css' 'src/**/*' 'tokens/**/*.json' 'views/**/*' config.json sd.config.js -c 'npm run build'"
   },
   "author": "John Barreiros <johnbarreiros2@gmail.com>",
