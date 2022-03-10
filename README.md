@@ -2,7 +2,7 @@
 
 Out of the box, Style Dictionary does not provide a way to showcase your tokens. This makes sense because design systems are unique and diverse, and providing a one-size-fits-all solution is a large ask.
 
-This repo provides a couple of very minimal examples that have worked for me. My hope is that their minimalism makes them easy to extend, customize, and remix.
+This repo provides a couple of very minimal examples that, I hope, are not too complicated to extend, customize, and remix.
 
 _Note, I have zero experience with mobile, and unsure how representing android/ios apps would affect any of this._
 
