@@ -3,10 +3,6 @@
   "introduction": "Design variables and assets representing the delicious Acme design system.",
   "sections": [
     {
-      "title": "Animation",
-      "groups": []
-    },
-    {
       "title": "Border",
       "groups": [
         {
