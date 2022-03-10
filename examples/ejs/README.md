@@ -29,7 +29,7 @@ The [`style-guide/static`](src/styleGuide.js) custom format imports [`style-guid
 
 The following is an annotated version of `style-guide-config.json`. It defines the structure of the style guide, as well as how to render each design token.
 
-```json
+```jsonc
 {
   "title": "page title",
   "introduction": "optional intro paragraph",
