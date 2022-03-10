@@ -6,7 +6,11 @@ Also includes a toolbar addon to change the format of the design token's name (e
 
 Hot Tip: If you are running Storybook >= 6.4, check out the [Storybook Composition](https://storybook.js.org/docs/react/sharing/storybook-composition) feature, which lets you embed a Storybook within another Storybook.
 
-<details><summary>Screenshot</summary><img src="screenshot.png" /></details>
+---
+
+**[See a preview of this style guide!!!](https://jbarreiros.github.io/style-dictionary-style-guide/storybook/)**
+
+---
 
 ## Files
 

@@ -4,7 +4,11 @@ Single-page style guide, using the [EJS templating language](https://ejs.co), an
 
 _Note, the generated style guide is not super pretty; I'm not a designer._
 
-<details><summary>Screenshot</summary><img src="screenshot.png" /></details>
+---
+
+**[See a preview of this style guide!!!](https://jbarreiros.github.io/style-dictionary-style-guide/ejs/)**
+
+---
 
 ## Files
 
