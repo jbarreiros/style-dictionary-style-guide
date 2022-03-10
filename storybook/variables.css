@@ -1,0 +1,81 @@
+/**
+ * Do not edit directly
+ * Generated on Thu, 10 Mar 2022 05:26:08 GMT
+ */
+
+:root {
+  --color-primary-blue: #0d6efd;
+  --color-primary-indigo: #6610f2;
+  --color-primary-purple: #6f42c1;
+  --color-primary-pink: #d63384;
+  --color-primary-red: #dc3545;
+  --color-primary-orange: #fd7e14;
+  --color-primary-yellow: #ffc107;
+  --color-primary-green: #198754;
+  --color-primary-teal: #20c997;
+  --color-primary-cyan: #0dcaf0;
+  --color-grey-100: #f8f9fa;
+  --color-grey-300: #dee2e6;
+  --color-grey-500: #adb5bd;
+  --color-grey-700: #495057;
+  --color-grey-900: #212529;
+  --color-static-white: #ffffff;
+  --color-static-black: #000000;
+  --asset-font-roboto-400-normal: "Roboto/Roboto-Regular";
+  --asset-font-roboto-400-italic: "Roboto/Roboto-Italic";
+  --asset-font-roboto-700-normal: "Roboto/Roboto-Bold";
+  --asset-font-roboto-700-italic: "Roboto/Roboto-BoldItalic";
+  --asset-icon-account-circle: "account_circle_black_24dp.svg";
+  --asset-icon-check-circle: "check_circle_black_24dp.svg";
+  --asset-icon-delete: "delete_black_24dp.svg";
+  --asset-icon-description: "description_black_24dp.svg";
+  --asset-icon-done: "done_black_24dp.svg";
+  --asset-icon-favorite: "favorite_black_24dp.svg";
+  --asset-icon-favorite-border: "favorite_border_black_24dp.svg";
+  --asset-icon-home: "home_black_24dp.svg";
+  --asset-icon-info: "info_black_24dp.svg";
+  --asset-icon-lock: "lock_black_24dp.svg";
+  --asset-icon-logout: "logout_black_24dp.svg";
+  --asset-icon-schedule: "schedule_black_24dp.svg";
+  --asset-icon-search: "search_black_24dp.svg";
+  --asset-icon-settings: "settings_black_24dp.svg";
+  --asset-icon-shopping-cart: "shopping_cart_black_24dp.svg";
+  --font-family-roboto: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif;
+  --font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-weight-lighter: lighter;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: bolder;
+  --font-line-height-base: 1.5;
+  --font-line-height-sm: 1.25;
+  --font-line-height-lg: 2; /* For use with headers */
+  --size-font-1: 2.5rem;
+  --size-font-2: 2rem;
+  --size-font-3: 1.75rem;
+  --size-font-4: 1.5rem;
+  --size-font-5: 1.25rem;
+  --size-font-6: 1rem;
+  --size-font-base: 1rem; /* Based on 16px */
+  --size-font-sm: 0.875rem;
+  --size-font-lg: 1.25rem;
+  --size-letter-spacing-quarter: .25px;
+  --size-letter-spacing-half: .5px;
+  --size-spacing-1: 0.25rem;
+  --size-spacing-2: 0.5rem;
+  --size-spacing-3: 1rem;
+  --size-spacing-4: 1.5rem;
+  --size-spacing-5: 3rem;
+  --size-border-1: 1px;
+  --size-border-2: 2px;
+  --size-border-3: 3px;
+  --size-border-4: 4px;
+  --size-border-5: 5px;
+  --size-radius-base: 0.25rem;
+  --size-radius-sm: 0.2rem;
+  --size-radius-lg: 0.3rem;
+  --size-radius-pill: 50rem;
+  --size-shadow-base: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  --size-shadow-sm:  0 .125rem .25rem rgba(0, 0, 0, .075);
+  --size-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
