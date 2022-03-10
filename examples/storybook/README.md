@@ -27,13 +27,14 @@ The following are standard for a Storybook project:
 - `.storybook/` - Storybook configuration.
   - Change the Storybook title in `manager.js`.
 - `src/` - React components and related utilities.
+- `stories/`
 
 The following are specific for generating the style guide:
 
 - `src/components/` - React components for rendering design token groups and individual design tokens.
 - `src/tokens-context.js`
 - `src/utils.js`
-- `style-guide/` - MDX-flavored Storybook pages.
+- `stories/` - MDX-flavored Storybook pages for organizing and displaying the design tokens.
 
 ## How It Works
 
