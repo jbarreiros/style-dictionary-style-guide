@@ -4,8 +4,8 @@
   "description": "Example Style Dictionary style guide using Storybook",
   "scripts": {
     "styledictionary": "npm run build-styledictionary && chokidar 'src/**/*' 'tokens/**/*.json' sd.config.js -c 'npm run build-styledictionary'",
-    "build-styledictionary": "style-dictionary build --config ./sd.config.js",
-    "clean-styledictionary": "style-dictionary clean --config ./sd.config.js",
+    "build-styledictionary": "style-dictionary build --config sd.config.js",
+    "clean-styledictionary": "style-dictionary clean --config sd.config.js",
     "storybook": "start-storybook -p 6006 -s dist",
     "build-storybook": "build-storybook -s dist"
   },

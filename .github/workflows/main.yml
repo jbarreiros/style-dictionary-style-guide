@@ -31,9 +31,23 @@ jobs:
           npm ci
           npm run build
 
+      - name: Install and build storybook example
+        run: |
+          cd examples/storybook
+          npm ci
+          npm run build-styledictionary
+          npm run build-storybook
+
       - name: Deploy ejs example
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
           folder: examples/ejs/public
           target-folder: ejs
+
+      - name: Deploy storybook example
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: examples/storybook/storybook-static
+          target-folder: storybook
