@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Style Guide Using Storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Style guide generated with React and [Storybook](https://storybook.js.org/).
 
-## Available Scripts
+Also includes a toolbar addon to change the format of the design token's name (e.g. "`--a-css-var`", "`$a-sass-var`", "`aJsVar`").
 
-In the project directory, you can run:
+Hot Tip: If you are running Storybook >= 6.4, check out the [Storybook Composition](https://storybook.js.org/docs/react/sharing/storybook-composition) feature, which lets you embed a Storybook within another Storybook.
 
-### `npm start`
+<details><summary>Screenshot</summary><img src="screenshot.png" /></details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Files
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The following are standard for a Style Dictionary project:
 
-### `npm test`
+- `assets/` - Fonts and icons.
+- `dist/` - Target folder for generated design tokens and assets.
+- `src/style-dictionary/` - The bare minimum transforms and formats necessary to generate this example.
+- `tokens/`
+- `sd.config.js` - Style Dictionary configuration.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following are standard for a Storybook project:
 
-### `npm run build`
+- `.storybook/` - Storybook configuration.
+  - Change the Storybook title in `manager.js`.
+- `src/` - React components and related utilities.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The following are specific for generating the style guide:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `src/components/` - React components for rendering design token groups and individual design tokens.
+- `src/tokens-context.js`
+- `src/utils.js`
+- `style-guide/` - MDX-flavored Storybook pages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How It Works
 
-### `npm run eject`
+Using the [`json`](https://amzn.github.io/style-dictionary/#/formats?id=json) formatter, Style Dictionary generates `dist/tokens.json`, which contains a dump of every (fully transformed) design token.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each Storybook [page](style-guide/) imports `dist/tokens.json`, which is then filtered (using [`getTokenGroup()`](src/utils.js)) to display a group of related design tokens.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## `tokenVariableFormat` Toolbar Addon
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This toolbar addon changes how each design token name is formatted.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+raw:  token-name
+css:  --token-name
+scss: $token-name
+js:   tokenName
+```
 
-## Learn More
+- The addon is registered in [`.storybook/preview.js`](.storybook/preview.js).
+  - See `globalTypes.tokenVariableForm` for configuration, such as defining which formats can be selected.
+- A global decorator (see `.storybook/preview.js`) injects the selected format into a [React Context](https://reactjs.org/docs/context.html), which makes it available to each Storybook story.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Commands
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm run styledictionary`
+  - Generates a Style Dictionary build, then starts watching source files for changes. If any files change, Style Dictionary runs the build again.
+- `npm run build-styledictionary`
+  - Runs the Style Dictionary "build" command.
+- `npm run clean-styledictionary`
+  - Runs the Style Dictionary "clean" command which will remove all files created by the last Style Dictionary build.
+- `npm run storybook`
+  - Starts a local version of Storybook, and watches for source file changes.
+- `npm run build-storybook`
+  - Generates a static build of Storybook.
