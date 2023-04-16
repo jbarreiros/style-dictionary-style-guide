@@ -1,15 +1,16 @@
-module.exports = {
-  "stories": [
-    "../stories/*.stories.mdx",
-    "../stories/*.stories.@(js|jsx|ts|tsx)"
+export default {
+  stories: [
+    // '../stories/*.stories.mdx',
+    // '../stories/*.stories.@(js|jsx|ts|tsx)',
+    // '../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  "addons": [
-    "@storybook/addon-toolbars",
-    "@storybook/addon-docs"
-  ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "webpack5"
+  staticDirs: ['../dist'],
+  addons: ['@storybook/addon-essentials'],
+  docs: {
+    autodocs: true,
   },
-  "staticDirs": ["../dist"],
-}
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+};
