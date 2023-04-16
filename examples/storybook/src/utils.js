@@ -44,11 +44,11 @@ function camalize(str) {
  */
 export function prefixTokenName(format, tokenName) {
   switch (format) {
-    case 'CSS':
+    case "CSS":
       return `--${tokenName}`;
-    case 'SASS':
+    case "SASS":
       return `$${tokenName}`;
-    case 'JS':
+    case "JS":
       return camalize(tokenName);
     default:
       return tokenName;

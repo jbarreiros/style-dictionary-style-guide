@@ -1,23 +1,23 @@
-import React from 'react';
-import TokensContext from '../src/tokens-context';
+import React from "react";
+import TokensContext from "../src/tokens-context";
 
 export default {
   parameters: {
     options: {
       storySort: {
-        order: ['Introduction', '*'],
+        order: ["Introduction", "*"],
       },
     },
   },
   globalTypes: {
     tokenVariableFormat: {
-      name: 'Variable format',
-      description: '',
-      defaultValue: 'JS',
+      name: "Variable format",
+      description: "",
+      defaultValue: "JS",
       toolbar: {
         // https://storybook.js.org/docs/react/faq#what-icons-are-available-for-my-toolbar-or-my-addon
-        icon: 'markup',
-        items: ['None', 'CSS', 'JS', 'SASS'],
+        icon: "markup",
+        items: ["None", "CSS", "JS", "SASS"],
         showName: true,
       },
     },

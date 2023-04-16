@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import TokensContext from '../tokens-context';
-import { prefixTokenName } from '../utils';
-import { Name, Comment } from './Token.style';
+import React, { useContext } from "react";
+import TokensContext from "../tokens-context";
+import { prefixTokenName } from "../utils";
+import { Name, Comment } from "./Token.style";
 
 const TokenName = ({ token }) => {
   const format = useContext(TokensContext);

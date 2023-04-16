@@ -1,54 +1,59 @@
-const StyleDictionary = require('style-dictionary');
-const fontFace = require('./src/style-dictionary/fontFace');
+const StyleDictionary = require("style-dictionary");
+const fontFace = require("./src/style-dictionary/fontFace");
 
 StyleDictionary.registerTransform(fontFace.transform);
 StyleDictionary.registerFormat(fontFace.format);
 
 module.exports = {
-  source: ['tokens/**/*.json'],
+  source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'time/seconds', 'color/css'],
-      buildPath: 'dist/',
+      transforms: [
+        "attribute/cti",
+        "name/cti/kebab",
+        "time/seconds",
+        "color/css",
+      ],
+      buildPath: "dist/",
       files: [
         {
-          destination: 'variables.css',
-          format: 'css/variables',
+          destination: "variables.css",
+          format: "css/variables",
         },
       ],
     },
-    'font-face': {
-      transforms: ['attribute/font'],
-      buildPath: 'dist/',
+    "font-face": {
+      transforms: ["attribute/font"],
+      buildPath: "dist/",
       files: [
         {
-          destination: 'fonts.css',
-          format: 'font-face',
+          destination: "fonts.css",
+          format: "font-face",
           filter: {
             attributes: {
-              category: 'asset',
-              type: 'font',
+              category: "asset",
+              type: "font",
             },
           },
           options: {
-            fontPathPrefix: 'assets/fonts/'
-          }
+            fontPathPrefix: "assets/fonts/",
+          },
         },
       ],
     },
     assets: {
-      transformGroup: ['assets'],
-      buildPath: 'dist/',
+      transformGroup: ["assets"],
+      buildPath: "dist/",
       files: [],
-      actions: ['copy_assets'],
+      actions: ["copy_assets"],
     },
     json: {
-      transforms: ['attribute/cti', 'name/cti/kebab'],
-      buildPath: 'dist/',
+      transforms: ["attribute/cti", "name/cti/kebab"],
+      buildPath: "dist/",
       files: [
         {
-          destination: 'tokens.json',
-          format: 'json',
+          destination: "tokens.json",
+          format: "json",
         },
       ],
     },

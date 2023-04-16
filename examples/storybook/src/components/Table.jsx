@@ -1,13 +1,13 @@
-import React from 'react';
-import TokenName from './TokenName';
-import TokenValue from './TokenValue';
-import { StyledTable } from './Table.style';
+import React from "react";
+import TokenName from "./TokenName";
+import TokenValue from "./TokenValue";
+import { StyledTable } from "./Table.style";
 
 export const Table = ({
   tokens,
   NameFormat = TokenName,
   ValueFormat = TokenValue,
-  SampleFormat
+  SampleFormat,
 }) => (
   <StyledTable>
     <thead>

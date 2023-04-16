@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const StyledGrid = styled.div`
   display: grid;
@@ -6,7 +6,9 @@ export const StyledGrid = styled.div`
   row-gap: var(--size-spacing-3);
   column-gap: var(--size-spacing-3);
 
-  ${props => props.columns && `
+  ${(props) =>
+    props.columns &&
+    `
     grid-template-columns: repeat(${props.columns}, 1fr);
   `}
 `;

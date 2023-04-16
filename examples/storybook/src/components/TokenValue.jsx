@@ -1,5 +1,5 @@
-import React from 'react';
-import { Value } from './Token.style';
+import React from "react";
+import { Value } from "./Token.style";
 
 const TokenValue = ({ token }) => (
   <>

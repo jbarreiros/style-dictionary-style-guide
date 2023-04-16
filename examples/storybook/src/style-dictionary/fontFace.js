@@ -1,4 +1,4 @@
-const { fileHeader } = require('style-dictionary').formatHelpers;
+const { fileHeader } = require("style-dictionary").formatHelpers;
 
 /**
  * Creates @font-face rules.
@@ -34,8 +34,8 @@ const { fileHeader } = require('style-dictionary').formatHelpers;
  * Custom transform to add structured metadata for helping generate @font-face rules.
  */
 exports.transform = {
-  name: 'attribute/font',
-  type: 'attribute',
+  name: "attribute/font",
+  type: "attribute",
   transformer: (prop) => ({
     category: prop.path[0],
     type: prop.path[1],
@@ -49,43 +49,47 @@ exports.transform = {
  * Custom format that generates a CSS file with @font-face rules.
  */
 exports.format = {
-  name: 'font-face',
+  name: "font-face",
   formatter: ({ dictionary: { allTokens }, options }) => {
-    const fontPathPrefix = options.fontPathPrefix || '../';
+    const fontPathPrefix = options.fontPathPrefix || "../";
 
     // https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src
     const formatsMap = {
-      'woff2': 'woff2',
-      'woff': 'woff',
-      'ttf': 'truetype',
-      'otf': 'opentype',
-      'svg': 'svg',
-      'eot': 'embedded-opentype'
+      woff2: "woff2",
+      woff: "woff",
+      ttf: "truetype",
+      otf: "opentype",
+      svg: "svg",
+      eot: "embedded-opentype",
     };
 
-    return allTokens.reduce((fontList, prop) => {
-      const {
-        attributes: { family, weight, style },
-        formats,
-        value: path
-      } = prop;
+    return allTokens
+      .reduce((fontList, prop) => {
+        const {
+          attributes: { family, weight, style },
+          formats,
+          value: path,
+        } = prop;
 
-      const urls = formats
-        .map(extension => `url("${fontPathPrefix}${path}.${extension}") format("${formatsMap[extension]}")`);
+        const urls = formats.map(
+          (extension) =>
+            `url("${fontPathPrefix}${path}.${extension}") format("${formatsMap[extension]}")`
+        );
 
-      const fontCss = [
-        '@font-face {',
-        `\n\tfont-family: "${family}";`,
-        `\n\tfont-style: ${style};`,
-        `\n\tfont-weight: ${weight};`,
-        `\n\tsrc: ${urls.join(',\n\t\t\t ')};`,
-        '\n\tfont-display: fallback;',
-        '\n}\n'
-      ].join('');
+        const fontCss = [
+          "@font-face {",
+          `\n\tfont-family: "${family}";`,
+          `\n\tfont-style: ${style};`,
+          `\n\tfont-weight: ${weight};`,
+          `\n\tsrc: ${urls.join(",\n\t\t\t ")};`,
+          "\n\tfont-display: fallback;",
+          "\n}\n",
+        ].join("");
 
-      fontList.push(fontCss);
+        fontList.push(fontCss);
 
-      return fontList;
-    }, []).join('\n');
+        return fontList;
+      }, [])
+      .join("\n");
   },
 };

@@ -4,13 +4,13 @@ export default {
     // '../stories/*.stories.@(js|jsx|ts|tsx)',
     // '../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'
   ],
-  staticDirs: ['../dist'],
-  addons: ['@storybook/addon-essentials'],
+  staticDirs: ["../dist"],
+  addons: ["@storybook/addon-essentials"],
   docs: {
     autodocs: true,
   },
   framework: {
-    name: '@storybook/react-webpack5',
+    name: "@storybook/react-webpack5",
     options: {},
   },
 };
