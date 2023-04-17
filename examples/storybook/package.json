@@ -12,6 +12,7 @@
   "author": "John Barreiros <johnbarreiros2@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@emotion/styled": "^11.10.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "style-dictionary": "^3.7.0"

@@ -36,10 +36,10 @@
   "font": {
     "family": {
       "roboto": {
-        "value": "Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif"
+        "value": "Roboto, system-ui, sans-serif"
       },
       "mono": {
-        "value": "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+        "value": "ui-monospace, monospace"
       }
     },
     "weight": {
