@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 08 Oct 2022 03:18:41 GMT
+ * Generated on Mon, 17 Apr 2023 06:09:10 GMT
  */
 
 :root {
@@ -40,8 +40,8 @@
   --asset-icon-search: "search_black_24dp.svg";
   --asset-icon-settings: "settings_black_24dp.svg";
   --asset-icon-shopping-cart: "shopping_cart_black_24dp.svg";
-  --font-family-roboto: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif;
-  --font-family-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-roboto: Roboto, system-ui, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
   --font-weight-lighter: lighter;
   --font-weight-light: 300;
   --font-weight-normal: 400;
