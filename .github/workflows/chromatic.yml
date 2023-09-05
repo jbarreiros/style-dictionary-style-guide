@@ -9,6 +9,7 @@ jobs:
         run: |
           cd examples/storybook
           npm ci
+          npm run build-styledictionary
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
