@@ -7,9 +7,13 @@
     "build-styledictionary": "style-dictionary build --config sd.config.js",
     "clean-styledictionary": "style-dictionary clean --config sd.config.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
-  "author": "John Barreiros <johnbarreiros2@gmail.com>",
+  "author": {
+    "name": "John Barreiros",
+    "email": "johnbarreiros2@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "@emotion/styled": "^11.10.6",
@@ -25,6 +29,7 @@
     "@storybook/react-webpack5": "^7.0.5",
     "@storybook/theming": "^7.0.5",
     "chokidar-cli": "^3.0.0",
+    "chromatic": "^7.0.0",
     "storybook": "^7.0.5",
     "webpack": "^5.69.1"
   },
